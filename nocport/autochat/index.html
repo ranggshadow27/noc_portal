@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Generate Chat - NOC Port</title>
+    <link rel="icon" href="img/mahaga-ico.png" type="image/x-icon" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script> -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+  </head>
+  <body>
+    <img class="wm-logo" src="img/mhg-logo-wpsn-2.png" />
+
+    <div class="container">
+      <h1>[NOC] Auto-Generate PIC Chat</h1>
+      <form onsubmit="event.preventDefault(); generateChat();">
+        <label for="file">Select JSON Data:</label>
+        <input type="file" id="file" accept=".json" required />
+
+        <label for="terminal_id">Terminal ID:</label>
+        <input
+          type="text"
+          id="terminal_id"
+          name="terminal_id"
+          required
+          placeholder="AO16418843007604N"
+        />
+
+        <label for="nama_site">Site Name:</label>
+        <input
+          type="text"
+          id="nama_site"
+          name="nama_site"
+          placeholder="This input is auto generated"
+          disabled
+        />
+
+        <div class="wrap-container">
+          <div class="wrap-container-child">
+            <label for="pic_gender">PIC Gender:</label>
+            <select id="pic_gender" name="pic_gender">
+              <option value="Bapak">♀ Male</option>
+              <option value="Ibu">♂ Female</option>
+            </select>
+          </div>
+
+          <div class="wrap-container-child">
+            <label for="type">Chat Type:</label>
+            <select id="type" name="type">
+              <option value="Initial">Initial</option>
+              <option value="Push V1">Push V1</option>
+              <option value="Push V2">Push V2</option>
+              <option value="Request Video">Request Video</option>
+              <option value="Surat Libur">Surat Libur</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit">Generate</button>
+      </form>
+
+      <h2>| Output PIC Chat</h2>
+      <textarea id="OutputFormatChat" readonly></textarea>
+
+      <h2>| PIC Contact</h2>
+      <div class="pic-contact">
+        <input id="OutputContact" readonly />
+        <button class="contact-submit" onclick="copyContactName()">Copy</button>
+      </div>
+
+      <h2>| Additional Information</h2>
+      <textarea id="AdditionalInfo" readonly></textarea>
+
+      <div class="bottom-wm">
+        <label class="wm-text">©2024 Mahaga - Network Operation Center </label>
+      </div>
+    </div>
+  </body>
+
+  <script src="js/index.js"></script>
+</html>

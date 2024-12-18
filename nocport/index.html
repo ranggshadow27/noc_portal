@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="autochat/img/mahaga-ico.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap"
+    />
+    <title>NOC Portal</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Outfit", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #101112;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+      }
+
+      .wm-logo {
+        width: 13%;
+      }
+
+      .content {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        line-height: 1.5;
+      }
+
+      .green-text {
+        color: #a4cb39;
+      }
+
+      .description {
+        color: #a6a6a8;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 50px;
+      }
+
+      .portal {
+        background-color: #101112;
+        border-radius: 46px;
+        padding: 40px;
+        width: 100%;
+        /* height: 40%; */
+        border: 2px solid #171919;
+        display: inline-block;
+      }
+
+      .portal:hover {
+        border: 2px solid #101112;
+        transition: 0.6s ease-in;
+      }
+
+      .portal h2 {
+        color: #a4cb39;
+      }
+
+      .header-white {
+        color: #fff;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .button {
+        background-color: #171919;
+        color: #a6a6a8;
+        padding: 15px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 500;
+        gap: 10px;
+      }
+
+      .button:hover {
+        background-color: #1719196b;
+        transition: 0.3s ease-out;
+      }
+
+      .button .dot {
+        width: 10px;
+        height: 10px;
+        background-color: #a4cb39;
+        border-radius: 50%;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 20px;
+        color: #1e2020;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <img class="wm-logo" src="autochat/img/mhg-logo-wpsn-2.png" />
+    </div>
+
+    <div class="content">
+      <h1>
+        One Portal <span class="green-text">System</span> <br />
+        For Unlimited Job Potential
+      </h1>
+      <p class="description">
+        The easiest way to take full control of your everyday NOC tasks. <br />
+        Let's work <strong><span class="green-text">Smart</span></strong
+        >, not <strong>Hard</strong>.
+      </p>
+
+      <div class="portal">
+        <!-- <h2>Mahaga NOC <span class="header-white">Portal</span></h2> -->
+        <div class="buttons">
+          <a href="nocport/autochat" class="button"
+            >Auto Chat PIC <span class="dot"></span
+          ></a>
+          <a href="/funsoteam" class="button"
+            >NSO Follow Up <span class="dot"></span
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2024 <strong>Mahaga</strong> - Network Operation Center
+    </footer>
+  </body>
+</html>
